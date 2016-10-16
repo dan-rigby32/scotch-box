@@ -7,6 +7,6 @@ Vagrant.configure("2") do |config|
     config.vm.network "private_network", ip: "192.168.33.10"
     config.vm.hostname = "scotchbox"
     config.vm.synced_folder "www", "/var/www", :mount_options => ["dmode=777", "fmode=666"]
-    config.vm.synced_folder "files/vhosts.conf", "/etc/apache2/sites-available/scotchbox.local.conf", :mount_options => ["dmode=777", "fmode=666"]
+    config.vm.synced_folder "sites-available", "/etc/apache2/sites-available", :mount_options => ["dmode=777", "fmode=666"]
 
 end
